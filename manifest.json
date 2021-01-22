@@ -1,0 +1,46 @@
+{
+  "name": "LetLogin Toolbox",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "LetLogin Toolbox",
+  
+  "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "cookies",
+        "tabs",
+        "*://www.youtube.com/",
+        "https://www.youtube.com/",
+        "https://drive.google.com/*"
+  ],
+  
+  "content_scripts": [
+    {
+      "js": [
+        "forward.js"
+      ],
+      "matches": [
+        "https://drive.google.com/*" 
+        
+      ],
+     
+      "exclude_globs": [
+              "*://youtube.com/",
+              "*consent.youtube.com*"
+      ]
+
+    }
+   
+  ],
+  
+    "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  
+    "icons": {
+    "16": "Icons/LetLogin2-16.png",
+    "48": "Icons/LetLogin2-48.png",
+    "128": "Icons/LetLogin2-128.png"
+   }
+}
