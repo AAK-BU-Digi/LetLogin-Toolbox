@@ -1,3 +1,4 @@
+'use strict';
 
 // handle Youtube cookies. 
 // When using Youtube without permission to log in, playing videoes can sometimes cause problems.
